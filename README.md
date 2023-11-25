@@ -13,6 +13,9 @@ l.write("hello world")
 // Thread B
 // message can be an error if more readers outside the quorum is trying to read a message.
 // it can be none if we've read all the messages in the buffer and some if there is a message to be read.
+
+// when the reader reads a message, it also has a `is_valid` key which tells us if the bytes have been
+// malformed somewhere between the writing and reading. Think of it as an integrity hash.
 match l.read() {
     Ok(Some(message)) => println!(message),
     Ok(None) => _,
