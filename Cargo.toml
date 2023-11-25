@@ -2,6 +2,12 @@
 name = "spmc-logger"
 version = "0.1.0"
 edition = "2021"
+authors = ["Paschal <paschalobba@gmail.com>"]
+description = "A single-producer multi-consumer persistent logger"
+readme = "README.md"
+repository = "https://github.com/obbap1/spmc-logger/tree/master"
+keywords = ["logger", "message-passing", "concurrency"]
+categories = ["asynchronous", "concurrency"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
