@@ -18,8 +18,8 @@ l.write("hello world")
 // malformed somewhere between the writing and reading. Think of it as an integrity hash.
 match l.read() {
     Ok(Some(message)) => println!(message),
-    Ok(None) => _,
-    Err(e) => _
+    Ok(None) => (),
+    Err(e) => ()
 }
 ```
 

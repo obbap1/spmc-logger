@@ -164,9 +164,10 @@ mod tests {
                      match  l.read() {
                         Ok(Some(res)) => {
                             let message: String = String::from_utf8(res.message).unwrap();
+                            assert!(res.is_valid);
                             eprintln!("Receiver: {:?}", message)
                         },
-                        Err(e) => /* eprintln!("ERROR {:?}", e) */ (),
+                        Err(_e) => /* eprintln!("ERROR {:?}", e) */ (),
                         Ok(None) => /* eprintln!("nothing is happening") */ ()
                     }
                 }
